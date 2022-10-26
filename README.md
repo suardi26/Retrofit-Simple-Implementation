@@ -13,10 +13,6 @@
  - minSdk 29
  - targetSdk 32
 
-### Library
-
- - Retrofit Version 2.9.0
-
 ### Social Media :
 <p align="left">
 <a href="https://fb.com/suardi.daudmanda" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" alt="suardi.daudmanda" height="30" width="40" /></a>
