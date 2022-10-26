@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:orientation="vertical"
+    android:background="@drawable/custom_button">
+
+    <TextView
+        android:id="@+id/textViewUserId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/value_user_id"
+        android:maxLines="1"/>
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/value_id"
+        android:maxLines="1"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTitle"
+        android:text="@string/value_title"
+        android:maxLines="3"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/textViewBody"
+        android:text="@string/value_body"
+        android:maxLines="5"/>
+
+</LinearLayout>

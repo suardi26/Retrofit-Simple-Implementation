@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DeleteDataActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutUserId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/hint_user_id"
+        app:endIconMode="clear_text"
+        app:helperText="Can't Change User ID !"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextUserId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutId"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/hint_id"
+        app:endIconMode="clear_text"
+        app:helperText="Can't Change ID !"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutTitle"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/hint_title"
+        app:endIconMode="clear_text"
+        app:helperText="Can't Change Title !"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:maxLines="2"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutBody"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/body"
+        app:endIconMode="clear_text"
+        app:helperText="Can't Change Body !"
+        app:helperTextTextColor="#FF0000">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:maxLines="5" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonEditData"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_button"
+        android:text="Delete"
+        android:textColor="#FA71CD"
+        android:textSize="17sp" />
+
+</LinearLayout>
