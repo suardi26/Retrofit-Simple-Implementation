@@ -2,10 +2,7 @@
 
 ### Library
 
- - Room Version 2.4.3
  - Retrofit Version 2.9.0
- - Navigation Component 2.5.2
- - Glide Version 4.14.2
 
 ### Software :
 
