@@ -3,7 +3,7 @@
 ### Library
 
  - Retrofit Version 2.9.0
-
+ - Dagger Hilt Version 2.44
 ### Software :
 
  - <a href="https://developer.android.com/studio" target="blank"><img align="center" src="https://img.icons8.com/ios-filled/150/000000/android-studio--v3.png" height="30" width="30" />&nbsp;&nbsp;&nbsp;Android Studio</a>
@@ -12,7 +12,7 @@
  - Kotlin Version 1.7.10
  - minSdk 29
  - targetSdk 32
-
+ 
 ### Social Media :
 <p align="left">
 <a href="https://fb.com/suardi.daudmanda" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/facebook.svg" alt="suardi.daudmanda" height="30" width="40" /></a>
