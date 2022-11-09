@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.practice.retrofit_simple_implementation.api.RetrofitClient
+import com.practice.retrofit_simple_implementation.api.Api
 import com.practice.retrofit_simple_implementation.databinding.ActivityDeleteDataBinding
 import com.practice.retrofit_simple_implementation.model.UserResponse
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class DeleteDataActivity : AppCompatActivity() {
     companion object {
         const val KEY_POSITION = "KEY_TO_DELETE"
     }
 
+    @Inject
+    lateinit var api: Api
     private lateinit var binding: ActivityDeleteDataBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +42,7 @@ class DeleteDataActivity : AppCompatActivity() {
             buttonEditData.setOnClickListener {
                 val success = 200
                 var messageSuccess = ""
-                RetrofitClient.instance.deletePost(textInputEditTextId.text.toString().toInt())
+                api.deletePost(textInputEditTextId.text.toString().toInt())
                     .enqueue(object : retrofit2.Callback<Unit> {
                         override fun onResponse(call: Call<Unit>, response: Response<Unit>) {
                             if (success == response.code()) {

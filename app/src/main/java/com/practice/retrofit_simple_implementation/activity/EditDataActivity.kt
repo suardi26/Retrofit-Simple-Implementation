@@ -5,18 +5,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import com.practice.retrofit_simple_implementation.api.RetrofitClient
+import com.practice.retrofit_simple_implementation.api.Api
 import com.practice.retrofit_simple_implementation.databinding.ActivityEditDataBinding
 import com.practice.retrofit_simple_implementation.model.UserResponse
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class EditDataActivity : AppCompatActivity() {
     companion object{
         const val KEY_POSITION = "KEY_TO_EDIT"
     }
 
+    @Inject
+    lateinit var api: Api
     private lateinit var binding: ActivityEditDataBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,7 +42,7 @@ class EditDataActivity : AppCompatActivity() {
             buttonEditData.setOnClickListener {
                 val success = 200
                 var messageSuccess = ""
-                RetrofitClient.instance.putUser(
+                api.putUser(
                     textInputEditTextId.text.toString().toInt(),
                     textInputEditTextUserId.text.toString().toInt(),
                     textInputEditTextTitle.text.toString(),

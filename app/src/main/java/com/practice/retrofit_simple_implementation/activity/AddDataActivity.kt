@@ -3,14 +3,20 @@ package com.practice.retrofit_simple_implementation.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.practice.retrofit_simple_implementation.api.RetrofitClient
+import com.practice.retrofit_simple_implementation.api.Api
 import com.practice.retrofit_simple_implementation.databinding.ActivityAddDataBinding
 import com.practice.retrofit_simple_implementation.model.UserResponse
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class AddDataActivity : AppCompatActivity() {
+
+    @Inject
+    lateinit var api: Api
     private lateinit var binding : ActivityAddDataBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,7 +31,7 @@ class AddDataActivity : AppCompatActivity() {
                 val title: String = textInputEditTextTitle.text.toString()
                 val text: String = textInputEditTextBody.text.toString()
 
-                RetrofitClient.instance.createUser(
+                api.createUser(
                     userId = userId.toInt(),
                     title = title,
                     text = text

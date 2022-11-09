@@ -10,16 +10,22 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.practice.retrofit_simple_implementation.R
 import com.practice.retrofit_simple_implementation.adapter.UserAdapter
-import com.practice.retrofit_simple_implementation.api.RetrofitClient
+import com.practice.retrofit_simple_implementation.api.Api
 import com.practice.retrofit_simple_implementation.databinding.ActivityMainBinding
 import com.practice.retrofit_simple_implementation.model.UserResponse
+import dagger.hilt.android.AndroidEntryPoint
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
+    @Inject
+    lateinit var api: Api
     private lateinit var binding: ActivityMainBinding
+
     private val rotateOpen: Animation by lazy { AnimationUtils.loadAnimation(this,
         R.anim.rotate_open_anim
     ) }
@@ -97,7 +103,7 @@ class MainActivity : AppCompatActivity() {
             recyclerViewUsers.setHasFixedSize(true)
             recyclerViewUsers.layoutManager = LinearLayoutManager(this@MainActivity)
 
-            RetrofitClient.instance.getUsers().enqueue(object : Callback<ArrayList<UserResponse>> {
+            api.getUsers().enqueue(object : Callback<ArrayList<UserResponse>> {
                 override fun onResponse(
                     call: Call<ArrayList<UserResponse>>,
                     response: Response<ArrayList<UserResponse>>
