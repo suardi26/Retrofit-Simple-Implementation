@@ -4,6 +4,7 @@
 
  - Retrofit Version 2.9.0
  - Dagger Hilt Version 2.44
+ 
 ### Software :
 
  - <a href="https://developer.android.com/studio" target="blank"><img align="center" src="https://img.icons8.com/ios-filled/150/000000/android-studio--v3.png" height="30" width="30" />&nbsp;&nbsp;&nbsp;Android Studio</a>
